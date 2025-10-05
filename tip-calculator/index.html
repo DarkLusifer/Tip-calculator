@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="tip-calculator-main">
+        <form id="tip-form">
+            <section aria-labelledby="inputs-heading">
+                <h2 id="inputs-heading">Enter Details</h2>
+                <div class="calculator-container">
+                    <div class="input-section">
+                        <!-- Bill Amount Input Group -->
+                        <div class="form-control">
+                            <label for="bill-input">Bill Amount ($)</label>
+                            <input type="number" id="bill-input" placeholder="0.00" min="0">
+                        </div>
+                        <!-- Tip Percentage Selection Group -->
+                        <div class="form-control">
+                            <fieldset>
+                                <legend>Select Tip %</legend>
+                                <div class="tip-buttons-container">
+                                    <button type="button" class="tip-percent-btn" data-tip="5">5%</button>
+                                    <button type="button" class="tip-percent-btn" data-tip="10">10%</button>
+                                    <button type="button" class="tip-percent-btn" data-tip="15">15%</button>
+                                    <button type="button" class="tip-percent-btn" data-tip="25">25%</button>
+                                    <button type="button" class="tip-percent-btn" data-tip="50">50%</button>
+                                    <div class="custom-tip-group">
+                                        <label for="custom-tip-input" class="visually-hidden">Custom Tip Percentage</label>
+                                        <input type="number" id="custom-tip-input" placeholder="Custom" min="0">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <!-- Number of People Input Group -->
+                        <div class="form-control">
+                            <label for="people-input">Number of People</label>
+                            <input type="number" id="people-input" placeholder="1">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="output-section" aria-labelledby="results-heading">
+                <h2 id="results-heading">Results</h2>
+                <div class="output-section">
+                    <!-- Display area for Tip Amount per person -->
+                    <div class="result-line">
+                        <div class="result-label">
+                            <p class="result-label">Tip Amount</p>
+                            <p class="result-qualifier">/ person</p>
+                        </div>
+                        <div class="result-value">
+                            <span id="tip-amount-display">$0.00</span>
+                        </div>
+                    </div>
+                    <!-- Display area for Total Amount per person -->
+                    <div class="result-line">
+                        <div class="result-label">
+                            <p class="result-label">Total</p>
+                            <p class="result-qualifier">/ person</p>
+                        </div>
+                        <div class="result-value">
+                            <span id="total-amount-display">$0.00</span>
+                        </div>
+                    </div>
+                    <button type="button" id="reset-button" class="reset-btn">RESET</button>
+                </div>
+            </section>
+        </form>
+        <footer>
+            <p>&copy; 2025 Rohit Singh</p>
+        </footer>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>
